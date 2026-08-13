@@ -22,3 +22,10 @@ class GamePlay(Level):
         self.add_room_object(self.score)
         self.lives = Lives(self, Globals.SCREEN_WIDTH - 150, 20)
         self.add_room_object(self.lives)
+
+        # load sound files
+        self.shoot_laser = self.load_sound("Laser_shot.ogg")
+        self.asteroid_shot = self.load_sound("Asteroid_shot.wav")
+        self.astronaut_saved = self.load_sound("Astronaut_saved.ogg")
+        self.asteroid_collision = self.load_sound("Ship_damage.ogg")
+        self.astronaut_shot = self.load_sound("Astronaut_hit.ogg")
