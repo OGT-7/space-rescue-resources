@@ -37,3 +37,12 @@ class Globals:
 
     total_count = 0
     destroyed_count = 0
+
+    # - Difficulty selection (controls starting lives only) - #
+    DIFFICULTY = "Medium"
+
+    DIFFICULTY_LIVES = {
+        "Easy": 5,
+        "Medium": 3,
+        "Hard": 1,
+    }

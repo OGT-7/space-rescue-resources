@@ -48,4 +48,11 @@ class Laser(RoomObject):
         elif other_type == "Astronaut":
             self.room.astronaut_shot.play()
             self.room.delete_object(other)
-            self.room.score.update_score(-10)
+            self.room.delete_object(self)
+            self.room.asteroid_collision.play()
+            Globals.LIVES -= 1
+            if Globals.LIVES > 0:
+                self.room.lives.update_image()
+            else:
+                self.room.running = False
+        self.room.delete_object(self)

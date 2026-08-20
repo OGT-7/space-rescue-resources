@@ -14,6 +14,9 @@ class GamePlay(Level):
         # add objects
         self.add_room_object(Ship(self, 25, 50))
         self.add_room_object(Zork(self,1120, 50))
+
+        # apply difficulty-based starting lives
+        Globals.LIVES = Globals.DIFFICULTY_LIVES[Globals.DIFFICULTY]
         
         # add HUD items
         self.score = Score(self, 
