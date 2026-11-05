@@ -9,7 +9,7 @@ class Title(RoomObject):
         RoomObject.__init__(self, room, x, y)
 
         # load and scale the title artwork
-        title_img = pygame.image.load(self.load_image("Title.png")).convert_alpha()
+        title_img = pygame.image.load(self.load_image("PostOrPass_Title.png")).convert_alpha()
         title_img = pygame.transform.scale(title_img, (800, 350))
 
         # build a taller canvas so there's room below the art to place text

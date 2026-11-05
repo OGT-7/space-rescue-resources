@@ -9,10 +9,10 @@ class Globals:
     SCORE = 0
 
     # - Set the starting number of lives - #
-    LIVES = 3
+    FOOTPRINTS = 0
 
     # - Set the Window display name - #
-    window_name = 'Space Rescue'
+    window_name = 'Post or Pass'
 
     # - Set the order of the rooms - #
     levels = ["WelcomeScreen", "GamePlay"]
@@ -42,7 +42,7 @@ class Globals:
     DIFFICULTY = "Medium"
 
     DIFFICULTY_LIVES = {
-        "Easy": 5,
-        "Medium": 3,
-        "Hard": 1,
+        "Easy": 3,
+        "Medium": 2,
+        "Hard": 1
     }

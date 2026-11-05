@@ -50,3 +50,18 @@ class Lives(RoomObject):
         Updates the number of lives on the UI
         """
         self.set_image(self.lives_icon[Globals.LIVES], 125, 23)
+        
+
+class Footprints(TextObject):
+    def __init__(self, room, x, y):
+        TextObject.__init__(self, room, x, y, "")
+
+        self.size = 32
+        self.font = "Arial"
+        self.colour = (255, 255, 255)
+        self.refresh()
+
+    def refresh(self):
+        limit = Globals.DIFFICULTY_LIVES[Globals.DIFFICULTY]
+        self.text = f"Footprints: {Globals.FOOTPRINTS}/{limit}"
+        self.update_text()

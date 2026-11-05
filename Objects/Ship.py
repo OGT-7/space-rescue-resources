@@ -1,3 +1,5 @@
+from email.mime import image
+
 from GameFrame import RoomObject, Globals
 from Objects.Laser import Laser
 import pygame
@@ -14,8 +16,8 @@ class Ship(RoomObject):
         RoomObject.__init__(self, room, x, y)
         
         # set image
-        image = self.load_image("Ship.png")
-        self.set_image(image,100,100)
+        image = self.load_image("Post_Button.png")
+        self.set_image(image, 300, 100)
         
         # register events
         self.handle_key_events = True
